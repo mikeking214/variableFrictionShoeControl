@@ -4,7 +4,7 @@ int stepPin = 3; //pin that controls stepping
 int setPoint; // desired position
 int currentHeight = 0; // estimated current height (last setPoint)
 int error = 0; // initialize error
-const int INTERVALS = 10; // number of intervals to split up full height into
+const int INTERVALS = 20; // number of intervals to split up full height into
 int sensorVal = 0; 
 
 // MOVING AVERAGE VARIABLES
@@ -12,7 +12,7 @@ const int NUMBERSAMPLES = 3;
 int samples[NUMBERSAMPLES] = {0};
 int pointerInSamples = 0;
 
-const int STEPS = 8666; // total number of microsteps from all the way down to all the way up - CALIBRATE
+const int STEPS = 3000; // total number of microsteps from all the way down to all the way up - CALIBRATE - 8666 is max steps
 
 void setup() { //declare Outputs
 pinMode(dirPin, OUTPUT); //direction
